@@ -63,13 +63,31 @@
 }
 
 /* Tablet Styles*/
+/* print is also useful when you want the user to be able to print the page */
+@media screen and (max-width: 1024px){
+   .quarter, .third {
+    width: calc(97%/2);
+   }
 
+   .flex-container {
+    height: fit-content;
+   }
 
+   [class^="box"]:last-child {
+    width: 98%;
+    /* flex-grow: 1; */
+   }
+}
 
 
 /* Mobile Styles*/
-
-
-
-
+@media screen and (max-width: 520px){
+  [class^="box"]{
+    width: 97%;
+  }
+}
+  
+/* Don't use pixels! Use relative units like percents */
+/* Use flexbox as much as possible. It will help a lot more */
+/* Use as few flexboxes as possible as it will make stylization simpler. */
 
